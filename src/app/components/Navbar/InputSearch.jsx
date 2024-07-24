@@ -5,9 +5,12 @@ const inputSearch = () =>{
 
     const searchRef = useRef()
     const router = useRouter()
+    
     const handleSearch = () =>{
+        const  keyword  = searchRef.current.value;
+        if(!keyword) return
         event.preventDefault();
-        router.push(`/search/${searchRef.current.value}`)
+        router.push(`/search/${keyword}`)
     }
     return (
         <form onSubmit={handleSearch}>
