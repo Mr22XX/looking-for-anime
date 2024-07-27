@@ -10,7 +10,7 @@ const AnimeList = ({ api }) => {
         const title = data.title || data.name;
         return (
           <div className="shadow-xl " key={data.mal_id}>
-            <Link href={`/${data.mal_id}`} className="cursor-pointer ">
+            <Link href={`/anime/${data.mal_id}`} className="cursor-pointer ">
               <Image
                 src={data.images.webp.image_url}
                 width={350}
