@@ -9,16 +9,16 @@ const AnimeList = ({ api }) => {
       {api.data?.map((data) => {
         const title = data.title || data.name;
         return (
-          <div className="shadow-xl" key={data.mal_id}>
-            <Link href={`/${data.mal_id}`} className="cursor-pointer">
+          <div className="shadow-xl " key={data.mal_id}>
+            <Link href={`/${data.mal_id}`} className="cursor-pointer ">
               <Image
                 src={data.images.webp.image_url}
                 width={350}
                 height={350}
-                className="w-full max-h-96 object-cover"
+                className="w-full max-h-96 object-cover "
                 alt={`Image of ${title}`}
               />
-              <h3 className="font-bold md:text-xl text-md p-4 text-white">{title}</h3>
+              <h3 className="font-bold md:text-xl text-md p-4 text-white ">{title}</h3>
             </Link>
           </div>
         );
